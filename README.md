@@ -82,3 +82,5 @@ The simulator expects input via standard input (stdin) or from a redirected file
 ### Process Line Format
 
 - For **algorithms 1–7**:
+- '<ProcessName>,<ArrivalTime>,<ServiceTime>'
+
