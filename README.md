@@ -22,8 +22,7 @@ Each algorithm is identified by a number and has unique characteristics:
 | 4      | Shortest Remaining Time (SRT) | Yes        | No               |
 | 5      | Highest Response Ratio Next   | No         | No               |
 | 6      | Feedback - Fixed (FB-1)       | Yes        | No (q = 1 fixed) |
-| 7      | Feedback - 2^i Quantum (FB-2i)| Yes        | No (q = 2^i)     |
-| 8      | Aging                         | Yes        | Yes              |
+| 7      | Aging                         | Yes        | Yes              |
 
 ---
 ## Description of Algorithms
