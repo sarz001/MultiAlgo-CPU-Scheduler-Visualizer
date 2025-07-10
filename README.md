@@ -98,4 +98,11 @@ Each subsequent line describes a process.
 
 #### For algorithms 1 through 7:
 `<ProcessName>,<ArrivalTime>,<ServiceTime>`
+#### For algorithm 8 (Aging):
+`<ProcessName>,<ArrivalTime>,<Priority>`
+
+### Notes:
+- Processes must be sorted in increasing order of arrival time.
+- If two processes arrive at the same time, the one with **lower priority value** is assumed to arrive first (i.e., lower number = higher priority).
+
 
