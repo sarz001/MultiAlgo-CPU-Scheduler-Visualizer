@@ -78,9 +78,15 @@ The simulator expects input via standard input (stdin) or from a redirected file
 - **Line 5+**: One line per process description
 
 ---
+## Example Input 
+trace
+1,2-4,3,5
+20
+5
+A,0,3
+B,2,6
+C,4,4
+D,6,5
+E,8,2
 
-### Process Line Format
-
-- For **algorithms 1–7**:
-- <ProcessName>,<ArrivalTime>,<ServiceTime>
 
