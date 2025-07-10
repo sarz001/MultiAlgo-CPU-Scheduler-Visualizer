@@ -62,3 +62,23 @@ Each algorithm is identified by a number and has unique characteristics:
   Prevents starvation by gradually increasing the priority of waiting processes over time.  
   **Type:** Preemptive
 
+## Input Format
+
+The simulator expects input via standard input (stdin) or from a redirected file.
+
+### Structure
+
+- **Line 1**: Mode of operation — either `"trace"` or `"stats"`
+- **Line 2**: Comma-separated list of algorithms to simulate  
+  _(e.g., `2-3` means Round Robin with time quantum q = 3)_
+- **Line 3**: Simulation end time  
+  _(e.g., `20`)_
+- **Line 4**: Number of processes  
+  _(e.g., `5`)_
+- **Line 5+**: One line per process description
+
+---
+
+### Process Line Format
+
+- For **algorithms 1–7**:
