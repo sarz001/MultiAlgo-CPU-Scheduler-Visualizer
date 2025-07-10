@@ -63,17 +63,39 @@ Each algorithm is identified by a number and has unique characteristics:
 
 ## Input Format
 
-The simulator expects input via standard input (stdin) or from a redirected file.
+The input to the simulator must follow the structure below, line by line:
 
-### Structure
+### Line 1:
+`"trace"` or `"stats"`  
+- Use `"trace"` to generate a timeline showing how each process executes over time.  
+- Use `"stats"` to output numerical results such as finish time, turnaround time, and normalized turnaround time.
 
-- **Line 1**: Mode of operation — either `"trace"` or `"stats"`
-- **Line 2**: Comma-separated list of algorithms to simulate  
-  _(e.g., `2-3` means Round Robin with time quantum q = 3)_
-- **Line 3**: Simulation end time  
-  _(e.g., `20`)_
-- **Line 4**: Number of processes  
-  _(e.g., `5`)_
-- **Line 5+**: One line per process description
+### Line 2:
+A comma-separated list of scheduling algorithms to be analyzed/visualized, with optional parameters where required.  
+Each algorithm is represented by a number:
 
----
+- `1` → FCFS (First Come First Serve)
+- `2-q` → RR (Round Robin with quantum `q`)
+- `3` → SPN (Shortest Process Next)
+- `4` → SRT (Shortest Remaining Time)
+- `5` → HRRN (Highest Response Ratio Next)
+- `6` → FB-1 (Feedback where all queues have fixed `q = 1`)
+- `7` → FB-2i (Feedback where time quantum = `2^i`)
+- `8-q` → Aging with quantum `q`
+
+Example: `1,2-4,3,5` means simulate FCFS, RR with q=4, SPN, and HRRN.
+
+### Line 3:
+An integer specifying the last time unit (`last instant`) to be shown in the simulation timeline.  
+Example: `20`
+
+### Line 4:
+An integer specifying the number of processes to be simulated.  
+Example: `5`
+
+### Line 5 and onward:
+Each subsequent line describes a process.
+
+#### For algorithms 1 through 7:
+`<ProcessName>,<ArrivalTime>,<ServiceTime>`
+
